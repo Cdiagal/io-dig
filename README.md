@@ -85,11 +85,15 @@
 
 
 
+
+---
+
+
 # Proyecto ejercicio 2. Sistema de compras en Línea.
 
 ## Diagrama de caso de uso de la tienda en línea
 
-
+<img src="Diagrama sistema de compras en linea.drawio.png">
 
 ## Especificación de caso de uso de la tienda en línea
 
@@ -102,17 +106,14 @@
 | Descripción     | Usuario común de la tienda en línea. |
 | Características | Cliente que puede navegar, comprar y pagar productos en la plataforma. |
 | Relaciones      | Agregar productos al carrito, Realizar pedido, Realizar pago |
-| Referencias     | Buscar productos, Añadir productos al carrito |
+| Referencias     | Buscar productos, Añadir productos al carrito, Pagar el pedido |
 | Notas           |                          |
 | Autor           | Carlos Antonio Díaz Galán |
 | Fecha           | 04/11/2024               |
 
 |  Atributo       |||
 |-----------------|--------------------------|-------------------|
-| _Nombre_        | _Descripción_            | _Tipo_           |
-| Nombre          | Nombre del cliente       | Texto            |
-| Correo electrónico | Email de contacto     | Texto            |
-| Método de pago  | Forma de pago preferida  | Selección        |
+| | |
 
 #### Administrador
 
@@ -209,3 +210,151 @@
 | Autor            | Carlos Antonio Díaz Galán |
 | Fecha            | 04/11/2024               |
 
+---
+
+# Proyecto ejercicio 3. Sistema de Gestión de cursos en línea.
+
+## Diagrama de caso de uso del sistema de gestión de cursos en línea.
+
+<img src="Diagrama sistema de gestión de cursos en línea .drawio.png">
+
+## Especificación de caso de uso de cursos en línea.
+
+# Proyecto Sistema de Gestión de Cursos en Línea
+## Diagrama de caso de uso del sistema de gestión de cursos en línea
+
+<img src="Diagrama_Gestion_Cursos_En_Linea.drawio.png">
+
+## Especificación de caso de uso del sistema de gestión de cursos en línea
+
+### Actores
+
+#### Estudiante
+
+|  Actor          | Estudiante                |
+|-----------------|---------------------------|
+| Descripción     | Usuario que se inscribe en cursos, visualiza el contenido del curso y realiza evaluaciones. |
+| Características | Puede navegar por los cursos disponibles, inscribirse en ellos, ver el material y completar evaluaciones. |
+| Relaciones      | Inscribirse en curso, Ver material del curso, Realizar evaluaciones |
+| Referencias     | Acceso a cursos y evaluaciones |
+| Notas           |                          |
+| Autor           | Carlos Antonio Díaz Galán |
+| Fecha           | 06/11/2024               |
+
+|  Atributo       |||
+|-----------------|---------------------------|-------------------|
+| _Nombre_        | _Descripción_             | _Tipo_           |
+| Nombre          | Nombre del estudiante     | Texto            |
+| Correo electrónico | Email de contacto       | Texto            |
+| Progreso        | Avance en el curso        | Porcentaje       |
+
+#### Profesor
+
+|  Actor          | Profesor                  |
+|-----------------|---------------------------|
+| Descripción     | Usuario responsable de crear y gestionar los cursos, así como de calificar las evaluaciones de los estudiantes. |
+| Características | Puede crear, modificar y actualizar los cursos, además de gestionar las evaluaciones. |
+| Relaciones      | Crear curso, Actualizar contenido del curso, Calificar evaluaciones |
+| Referencias     | Administración de cursos y evaluaciones |
+| Notas           |                          |
+| Autor           | Carlos Antonio Díaz Galán |
+| Fecha           | 06/11/2024               |
+
+|  Atributo       |||
+|-----------------|---------------------------|-------------------|
+| _Nombre_        | _Descripción_             | _Tipo_           |
+| ID de empleado  | Identificación del profesor | Numérico      |
+| Asignatura      | Curso asignado            | Texto            |
+| Calificaciones  | Calificaciones de los estudiantes | Registro |
+
+### Casos de uso
+
+#### Inscribirse en curso
+
+| Caso de Uso CU.1 | Inscribirse en curso                |
+|------------------|-------------------------------------|
+| Fuentes          | Este caso de uso se sustenta en los requisitos de inscripción para estudiantes |
+| Actor            | Estudiante                          |
+| Descripción      | El estudiante se inscribe en un curso disponible en la plataforma. |
+| Flujo básico     | 1. El estudiante selecciona un curso.<br>2. La plataforma muestra los detalles del curso.<br>3. El estudiante confirma su inscripción. |
+| Pre-condiciones  | El estudiante debe estar registrado en la plataforma. |
+| Post-condiciones | El estudiante queda inscrito y tiene acceso al contenido del curso. |
+| Requerimientos   | Acceso a los cursos en la plataforma |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
+
+#### Ver material del curso
+
+| Caso de Uso CU.2 | Ver material del curso              |
+|------------------|-------------------------------------|
+| Fuentes          | Basado en la funcionalidad de visualización de contenidos del curso |
+| Actor            | Estudiante                          |
+| Descripción      | El estudiante accede al contenido del curso en el que está inscrito. |
+| Flujo básico     | 1. El estudiante selecciona el curso.<br>2. El sistema despliega el material de estudio. |
+| Pre-condiciones  | El estudiante debe estar inscrito en el curso. |
+| Post-condiciones | El contenido se muestra al estudiante. |
+| Requerimientos   | Conexión a internet, Contenido disponible en la base de datos |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
+
+#### Realizar evaluaciones
+
+| Caso de Uso CU.3 | Realizar evaluaciones               |
+|------------------|-------------------------------------|
+| Fuentes          | Basado en los requisitos de evaluación de los cursos |
+| Actor            | Estudiante                          |
+| Descripción      | El estudiante completa las evaluaciones del curso en el que está inscrito. |
+| Flujo básico     | 1. El estudiante selecciona la evaluación.<br>2. El sistema presenta las preguntas.<br>3. El estudiante responde y envía la evaluación. |
+| Pre-condiciones  | El estudiante debe estar inscrito en el curso y la evaluación debe estar disponible. |
+| Post-condiciones | La evaluación queda registrada y lista para calificar. |
+| Requerimientos   | Conexión a internet, Evaluación configurada |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
+
+#### Crear curso
+
+| Caso de Uso CU.4 | Crear curso                         |
+|------------------|-------------------------------------|
+| Fuentes          | Este caso de uso se sustenta en la funcionalidad de gestión de cursos |
+| Actor            | Profesor                            |
+| Descripción      | El profesor crea un nuevo curso en la plataforma, definiendo el contenido y las evaluaciones. |
+| Flujo básico     | 1. El profesor accede a la sección de administración de cursos.<br>2. Introduce el nombre y descripción del curso.<br>3. Añade el contenido y las evaluaciones. |
+| Pre-condiciones  | El profesor debe estar autenticado en el sistema. |
+| Post-condiciones | El curso queda disponible para inscripción. |
+| Requerimientos   | Herramienta de edición de cursos |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
+
+#### Calificar evaluaciones
+
+| Caso de Uso CU.5 | Calificar evaluaciones              |
+|------------------|-------------------------------------|
+| Fuentes          | Basado en la funcionalidad de calificación |
+| Actor            | Profesor                            |
+| Descripción      | El profesor revisa y califica las evaluaciones completadas por los estudiantes. |
+| Flujo básico     | 1. El profesor accede a las evaluaciones del curso.<br>2. Revisa las respuestas de los estudiantes.<br>3. Asigna una calificación. |
+| Pre-condiciones  | La evaluación debe haber sido completada por el estudiante. |
+| Post-condiciones | La calificación se registra en el sistema. |
+| Requerimientos   | Conexión a internet |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
+
+#### Actualizar contenido del curso
+
+| Caso de Uso CU.6 | Actualizar contenido del curso      |
+|------------------|-------------------------------------|
+| Fuentes          | Basado en la necesidad de edición de contenidos |
+| Actor            | Profesor                            |
+| Descripción      | El profesor actualiza el contenido de un curso para mantenerlo al día. |
+| Flujo básico     | 1. El profesor accede al curso.<br>2. Selecciona la opción de actualizar contenido.<br>3. Modifica o añade material. |
+| Pre-condiciones  | El curso debe estar creado y el profesor autenticado. |
+| Post-condiciones | El contenido actualizado se refleja en el curso. |
+| Requerimientos   | Herramienta de edición de contenido |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 06/11/2024               |
