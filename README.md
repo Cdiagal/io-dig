@@ -3,7 +3,7 @@
 
 
 
-<img src="Diagrama sin título.drawio.png">
+<img src="Diagrama sin título.drawio copy.png">
 
 ## Especificación de caso de uso de la biblioteca.
 
