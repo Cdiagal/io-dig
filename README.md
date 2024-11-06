@@ -16,8 +16,8 @@
 |---|---|
 | Descripción  | Usuario común de la biblioteca.  |
 | Características  |  |
-| Relaciones | Registrar un préstamo  |
-| Referencias | Buscar libros , pedir préstamo |   
+| Relaciones | - Registrar un préstamo  |
+| Referencias |- Buscar libros <br> - Pedir préstamo |   
 |  Notas |   |
 | Autor  | Carlos Antonio Díaz Galán |
 |Fecha | 29/10/2024 |
@@ -35,7 +35,7 @@
 | Descripción  | Bibliotecario de la biblioteca.  |
 | Características  | El bibliotecario realiza las mismas acciones que el Usuario y las acciones específicas. |
 | Relaciones | Registrar un préstamo. |
-| Referencias | solicitar prestamo, Buscar libro. |   
+| Referencias | - Solicitar prestamo <br> - Buscar libro. |   
 |  Notas |   |
 | Autor  | Carlos Antonio Díaz Galán |
 |Fecha | 29/10/2024 |
@@ -53,7 +53,7 @@
 | Descripción  | Notificación de la biblioteca.  |
 | Características  |  |
 | Relaciones |  |
-| Referencias | Enviar notificación, Recordatiorio de una devolución. |   
+| Referencias | - Enviar notificación <br> - Recordatiorio de una devolución. |   
 |  Notas |   |
 | Autor  | Carlos Antonio Díaz Galán |
 |Fecha | 29/10/2024 |
@@ -73,17 +73,59 @@
   |---|---|
   | Fuentes  | Este caso de uso se sustenta gracias al [documento]()  |
   | Actor  |  Usuario, bibliotecario. |
-  | Descripción | _Descripción del caso de uso_  |
-  | Flujo básico | _Descripción paso a paso de la ejecución. (1->2->3.)_ |
-  | Pre-condiciones | _Que debe ocurrir con anterioridad_  |  
-  | Post-condiciones  | _Que debe ocurrir con posterioridad_  |  
-  |  Requerimientos | _Que debe de exister para que el caso de uso se ejecute. Ej: Tarjeta de crédito_  |
+  | Descripción | Permite buscar libros en la biblioteca mediante el catálogo  |
+  | Flujo básico |1. El usuario ingresa sus credenciales. <br>2. El usuario ingresa el título o autor.<br>3. El sistema muestra los resultados.<br>4. El usuario selecciona un libro.<br>5. El usuario solicita un libro. |
+  | Pre-condiciones | El usuario tiene que estar dado de alta en el sistema.  |  
+  | Post-condiciones  | Se muestran los resultados.  |  
+  |  Requerimientos | Catálogo de libros.  |
   |  Notas |  _Notas adicionales_ |
-  | Autor  | _Quien desarrolla la especificación del actor_ |
-  |Fecha | _Fecha de la especificación_ |
+  | Autor  | Carlos Antonio Díaz Galán |
+  |Fecha | 29/10/2024 |
 
+#### Registrar préstamo
 
+| Caso de Uso CU.2 | Registrar préstamo               |
+|------------------|----------------------------------|
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
+| Actor            | Usuario, bibliotecario           |
+| Descripción      | Permite registrar un préstamo de libro solicitado por un usuario. |
+| Flujo básico     | 1. El bibliotecario selecciona el libro solicitado por el usuario.<br>2. Se verifica la disponibilidad del libro.<br>3. Se registra el préstamo y se actualiza el estado del libro.<br>4. El sistema genera una fecha de devolución. |
+| Pre-condiciones  | El usuario debe tener una cuenta activa y el libro debe estar disponible. |
+| Post-condiciones | El libro queda registrado como prestado y la fecha de devolución se establece. |
+| Requerimientos   | Sistema de registro de préstamos y disponibilidad del libro |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 29/10/2024               |
 
+#### Enviar notificación
+
+| Caso de Uso CU.3 | Enviar notificación               |
+|------------------|-----------------------------------|
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
+| Actor            | Sistema de notificación           |
+| Descripción      | Envía una notificación de recordatorio a los usuarios sobre la fecha de devolución de un libro. |
+| Flujo básico     | 1. El sistema revisa los préstamos activos.<br>2. Se identifican los préstamos próximos a vencer.<br>3. Se envía una notificación de recordatorio al usuario. |
+| Pre-condiciones  | Debe haber préstamos activos en el sistema. |
+| Post-condiciones | El usuario recibe una notificación de recordatorio. |
+| Requerimientos   | Sistema de notificación y contacto del usuario |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 29/10/2024               |
+
+#### Recordar devolución
+
+| Caso de Uso CU.4 | Recordar devolución               |
+|------------------|-----------------------------------|
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
+| Actor            | Sistema de notificación           |
+| Descripción      | El sistema envía un recordatorio de devolución al usuario cuando se aproxima la fecha de vencimiento. |
+| Flujo básico     | 1. El sistema identifica los préstamos próximos a vencer.<br>2. Se genera una notificación de recordatorio.<br>3. El usuario recibe la notificación. |
+| Pre-condiciones  | Debe haber una fecha de vencimiento próxima para el préstamo del libro. |
+| Post-condiciones | El usuario es notificado del próximo vencimiento del préstamo. |
+| Requerimientos   | Sistema de notificación y contacto del usuario |
+| Notas            |                          |
+| Autor            | Carlos Antonio Díaz Galán |
+| Fecha            | 29/10/2024               |
 
 ---
 
@@ -110,8 +152,9 @@
 | Autor           | Carlos Antonio Díaz Galán |
 | Fecha           | 04/11/2024               |
 
-|  Atributo       |||
-|-----------------|--------------------------|-------------------|
+|  Atributo |||
+|---|---|---|
+| _Nombre_  | _Descripción_  | _Tipo_ |
 | | |
 
 #### Administrador
@@ -126,11 +169,10 @@
 | Autor           | Carlos Antonio Díaz Galán |
 | Fecha           | 04/11/2024               |
 
-|  Atributo       |||
-|-----------------|--------------------------|-------------------|
-| _Nombre_        | _Descripción_            | _Tipo_           |
-| ID de empleado  | Identificación del administrador | Numérico  |
-| Nivel de acceso | Nivel de privilegios     | Selección        |
+|  Atributo |||
+|---|---|---|
+| _Nombre_  | _Descripción_  | _Tipo_ |
+| | |
 
 ### Casos de uso
 
@@ -138,7 +180,7 @@
 
 | Caso de Uso CU.1 | Buscar productos                    |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en el análisis de requerimientos del sistema de compras en línea |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Cliente                             |
 | Descripción      | El cliente busca productos mediante palabras clave o categorías. |
 | Flujo básico     | 1. El cliente ingresa palabras clave en el buscador.<br>2. El sistema muestra los resultados de productos relevantes.<br>3. El cliente selecciona un producto para ver sus detalles. |
@@ -153,7 +195,7 @@
 
 | Caso de Uso CU.2 | Añadir productos al carrito         |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en el análisis de requerimientos del sistema de compras en línea |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Cliente                             |
 | Descripción      | El cliente añade productos al carrito de compras para realizar una compra. |
 | Flujo básico     | 1. El cliente selecciona un producto.<br>2. El sistema muestra los detalles del producto.<br>3. El cliente selecciona la cantidad y añade al carrito. |
@@ -168,7 +210,7 @@
 
 | Caso de Uso CU.3 | Realizar pedido                     |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en el análisis de requerimientos del sistema de compras en línea |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Cliente                             |
 | Descripción      | El cliente revisa su carrito y confirma la compra de los productos. |
 | Flujo básico     | 1. El cliente revisa los productos en su carrito.<br>2. El cliente confirma su dirección de envío.<br>3. El sistema calcula el total de la compra.<br>4. El cliente confirma el pedido. |
@@ -183,7 +225,7 @@
 
 | Caso de Uso CU.4 | Realizar pago                       |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en el análisis de requerimientos del sistema de compras en línea |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Cliente                             |
 | Descripción      | El cliente selecciona el método de pago y completa la compra. |
 | Flujo básico     | 1. El cliente selecciona su método de pago.<br>2. El sistema procesa el pago.<br>3. Se confirma la compra al cliente. |
@@ -198,7 +240,7 @@
 
 | Caso de Uso CU.5 | Gestionar catálogo de productos     |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en el análisis de requerimientos del sistema de compras en línea |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Administrador                       |
 | Descripción      | El administrador añade, modifica o elimina productos del catálogo de la tienda en línea. |
 | Flujo básico     | 1. El administrador accede al catálogo de productos.<br>2. Añade, modifica o elimina un producto.<br>3. Guarda los cambios en el sistema. |
@@ -243,9 +285,7 @@
 |  Atributo       |||
 |-----------------|---------------------------|-------------------|
 | _Nombre_        | _Descripción_             | _Tipo_           |
-| Nombre          | Nombre del estudiante     | Texto            |
-| Correo electrónico | Email de contacto       | Texto            |
-| Progreso        | Avance en el curso        | Porcentaje       |
+| | | |
 
 #### Profesor
 
@@ -262,9 +302,7 @@
 |  Atributo       |||
 |-----------------|---------------------------|-------------------|
 | _Nombre_        | _Descripción_             | _Tipo_           |
-| ID de empleado  | Identificación del profesor | Numérico      |
-| Asignatura      | Curso asignado            | Texto            |
-| Calificaciones  | Calificaciones de los estudiantes | Registro |
+| | | |
 
 ### Casos de uso
 
@@ -272,10 +310,10 @@
 
 | Caso de Uso CU.1 | Inscribirse en curso                |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en los requisitos de inscripción para estudiantes |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Estudiante                          |
 | Descripción      | El estudiante se inscribe en un curso disponible en la plataforma. |
-| Flujo básico     | 1. El estudiante selecciona un curso.<br>2. La plataforma muestra los detalles del curso.<br>3. El estudiante confirma su inscripción. |
+| Flujo básico     | 1. El estudiante selecciona un curso.<br>2. La plataforma muestra el curso.<br>3. El estudiante se inscribe. |
 | Pre-condiciones  | El estudiante debe estar registrado en la plataforma. |
 | Post-condiciones | El estudiante queda inscrito y tiene acceso al contenido del curso. |
 | Requerimientos   | Acceso a los cursos en la plataforma |
@@ -287,7 +325,7 @@
 
 | Caso de Uso CU.2 | Ver material del curso              |
 |------------------|-------------------------------------|
-| Fuentes          | Basado en la funcionalidad de visualización de contenidos del curso |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Estudiante                          |
 | Descripción      | El estudiante accede al contenido del curso en el que está inscrito. |
 | Flujo básico     | 1. El estudiante selecciona el curso.<br>2. El sistema despliega el material de estudio. |
@@ -302,7 +340,7 @@
 
 | Caso de Uso CU.3 | Realizar evaluaciones               |
 |------------------|-------------------------------------|
-| Fuentes          | Basado en los requisitos de evaluación de los cursos |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Estudiante                          |
 | Descripción      | El estudiante completa las evaluaciones del curso en el que está inscrito. |
 | Flujo básico     | 1. El estudiante selecciona la evaluación.<br>2. El sistema presenta las preguntas.<br>3. El estudiante responde y envía la evaluación. |
@@ -317,7 +355,7 @@
 
 | Caso de Uso CU.4 | Crear curso                         |
 |------------------|-------------------------------------|
-| Fuentes          | Este caso de uso se sustenta en la funcionalidad de gestión de cursos |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Profesor                            |
 | Descripción      | El profesor crea un nuevo curso en la plataforma, definiendo el contenido y las evaluaciones. |
 | Flujo básico     | 1. El profesor accede a la sección de administración de cursos.<br>2. Introduce el nombre y descripción del curso.<br>3. Añade el contenido y las evaluaciones. |
@@ -332,7 +370,7 @@
 
 | Caso de Uso CU.5 | Calificar evaluaciones              |
 |------------------|-------------------------------------|
-| Fuentes          | Basado en la funcionalidad de calificación |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Profesor                            |
 | Descripción      | El profesor revisa y califica las evaluaciones completadas por los estudiantes. |
 | Flujo básico     | 1. El profesor accede a las evaluaciones del curso.<br>2. Revisa las respuestas de los estudiantes.<br>3. Asigna una calificación. |
@@ -347,7 +385,7 @@
 
 | Caso de Uso CU.6 | Actualizar contenido del curso      |
 |------------------|-------------------------------------|
-| Fuentes          | Basado en la necesidad de edición de contenidos |
+| Fuentes          | Este caso de uso se sustenta gracias al [documento]() |
 | Actor            | Profesor                            |
 | Descripción      | El profesor actualiza el contenido de un curso para mantenerlo al día. |
 | Flujo básico     | 1. El profesor accede al curso.<br>2. Selecciona la opción de actualizar contenido.<br>3. Modifica o añade material. |

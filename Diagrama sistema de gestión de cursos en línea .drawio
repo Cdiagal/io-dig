@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Página-1" id="quOFpwzGg_t2mJeXDZb7">
-        <mxGraphModel dx="936" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="855" dy="1328" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -70,7 +70,7 @@
                 <mxCell id="o_IoWh3dbLJrlLXt5_01-21" value="&lt;div&gt;SISTEMA&lt;/div&gt;" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
                     <mxGeometry x="1050" y="400" width="50" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;Compra en tienda.&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+                <mxCell id="2" value="&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;Compra en tienda.&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="1" vertex="1">
                     <mxGeometry x="660" y="100" width="120" height="20" as="geometry"/>
                 </mxCell>
             </root>
