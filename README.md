@@ -51,8 +51,8 @@
 |  Actor | Bibliotecario |
 |---|---|
 | Descripción  | Notificación de la biblioteca.  |
-| Características  |  |
-| Relaciones |  |
+| Características  | Avisa mediante notificaciones el vencimiento de préstamos y recordatorios. |
+| Relaciones | - Enviar notificación. |
 | Referencias | - Enviar notificación <br> - Recordatiorio de una devolución. |   
 |  Notas |   |
 | Autor  | Carlos Antonio Díaz Galán |
@@ -146,8 +146,8 @@
 |-----------------|--------------------------|
 | Descripción     | Usuario común de la tienda en línea. |
 | Características | Cliente que puede navegar, comprar y pagar productos en la plataforma. |
-| Relaciones      | Agregar productos al carrito, Realizar pedido, Realizar pago |
-| Referencias     | Buscar productos, Añadir productos al carrito, Pagar el pedido |
+| Relaciones      | - Agregar productos al carrito <br> - Realizar pedido <br> - Realizar pago |
+| Referencias     | - Buscar productos <br> - Añadir productos al carrito <br> - Pagar el pedido |
 | Notas           |                          |
 | Autor           | Carlos Antonio Díaz Galán |
 | Fecha           | 04/11/2024               |
