@@ -28,7 +28,6 @@
 | | |
 
 #### Bibliotecario.
-|---|---|
 
 
 |  Actor | Bibliotecario |
